@@ -22,6 +22,7 @@
     "build:umd": "cross-env NODE_ENV=development webpack src/index.js --output umd/ConnectedReactRouter.js",
     "build:umd:min": "cross-env NODE_ENV=production webpack -p src/index.js --output umd/ConnectedReactRouter.min.js",
     "build": "npm run build:esm & npm run build:commonjs & npm run build:umd & npm run build:umd:min",
+    "prepare": "npm run build",
     "lint": "eslint .",
     "test": "jest --config ./.jestrc.json",
     "test:watch": "npm run test -- --watch",
